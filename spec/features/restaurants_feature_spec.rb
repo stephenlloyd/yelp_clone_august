@@ -22,15 +22,29 @@ describe 'restaurants' do
 end
 
 describe "creating restaurants" do
-it "prompts user to fill out a form, then displays the new restaurant" do
-  visit '/restaurants'
-  click_link 'Add a restaurant'
-  fill_in 'Name', with: 'KFC'
-  click_button 'Create Restaurant'
-  expect(page).to have_content 'KFC'
-  expect(current_path).to eq '/restaurants'
+  context 'a valid restaurant' do
+    it "prompts user to fill out a form, then displays the new restaurant" do
+    visit '/restaurants'
+    click_link 'Add a restaurant'
+    fill_in 'Name', with: 'KFC'
+    click_button 'Create Restaurant'
+    expect(page).to have_content 'KFC'
+    expect(current_path).to eq '/restaurants'
 end
 end
+
+context 'an invalid restaurant' do
+   it 'does not let you subit without a name that is too short' do
+    visit '/restaurants' 
+    click_link 'Add a restaurant'
+    fill_in 'Name', with: 'kf'
+    click_button 'Create Restaurant'
+    expect(page).not_to have_css 'h2', text: 'kf'
+    expect(page).to have_content 'error'
+  end
+end
+end
+
 
 describe 'editing restaurants' do
   before do
@@ -69,12 +83,8 @@ describe 'showing a restaurant' do
     expect(page).to have_content("Best Nandos ever")
     expect(current_path).to match(/restaurants\/\d/)
   end
-
-  # bin/rails g migration AddDescriptionToRestaurants description:text
-  # bin/rake db:migrate
-
-
 end
+
 
 
 
