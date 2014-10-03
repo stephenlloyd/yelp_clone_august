@@ -9,7 +9,7 @@ def new
 end
 
 def create
-	@restaurant = Restaurant.new(params[:restaurant].permit(:name))
+	@restaurant = Restaurant.new(params[:restaurant].permit(:name, :image))
 	if @restaurant.save
 		redirect_to restaurants_path
 	else
