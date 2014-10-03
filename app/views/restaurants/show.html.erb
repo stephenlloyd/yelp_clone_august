@@ -3,3 +3,13 @@
 
 <%= image_tag @restaurant.image.url(:medium) %>
 
+<% if @restaurant.long && @restaurant.lat %>
+
+<div id="map" style="height:500px; width:700px"></div>
+
+<div class="lat" style="display:none"><%=@restaurant.lat%></div>
+<div class="long" style="display:none"><%=@restaurant.long%></div>
+
+
+<%end%>
+
