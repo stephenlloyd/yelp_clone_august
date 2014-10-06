@@ -7,3 +7,38 @@
 	width: 700px;
 	height: 500px;
 }
+
+.row {
+  margin-bottom: 40px;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border: solid 4px teal;
+}
+
+.avatar img {
+  max-height: 170px;
+}
+
+.stars{
+  font-size: 20px;
+  color: #DB9E36;
+}
+
+.restaurant-links a, .restaurant-links a:hover {
+  color: #BD4932;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.restaurant-links a {
+  opacity: .5;
+}
+
+.restaurant-links a:hover {
+  opacity: .8;
+}
+
