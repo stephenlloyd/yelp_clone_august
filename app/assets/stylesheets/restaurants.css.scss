@@ -15,7 +15,6 @@
 .avatar {
   width: 180px;
   height: 180px;
-  border: solid 4px teal;
 }
 
 .avatar img {
@@ -28,17 +27,26 @@
 }
 
 .restaurant-links a, .restaurant-links a:hover {
-  color: #BD4932;
+  background-color: #BD4932;
+  color: #FFF;
   text-decoration: none;
   font-size: 20px;
-  padding: 5px;
+  padding: 6px;
+  border-radius: 50%;
 }
 
 .restaurant-links a {
   opacity: .5;
+  margin: 0 auto;
 }
 
 .restaurant-links a:hover {
   opacity: .8;
+}
+
+hr.separator{
+  border: 1px dashed #BD4932;
+  opacity: .25;
+  width: 60%
 }
 

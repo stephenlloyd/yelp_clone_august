@@ -13,5 +13,57 @@
  *= require_tree .
  *= require_self
  */
+
+// ======================
+// IMPORTS
+// ======================
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// ======================
+// FONTS
+// ======================
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,700,400italic);
+
+// ======================
+// LAYOUT
+// ======================
+body {
+  margin-top: 70px;
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+.navbar-inverse {
+  background-color: #0C4147;
+}
+
+.navbar-inverse .navbar-nav li a {
+  color: #FFF;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #FFF;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+  background-color: #072529;
+}
+
+.navbar-brand {
+  font-family: 'Lobster', serif;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-weight: bold;
+  color: #BD4932;
+}
+
+p {
+  color: #105B63;
+}
+
+p a, p a:hover, p a:visited {
+  color: #BD4932;
+}

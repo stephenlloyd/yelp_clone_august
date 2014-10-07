@@ -17,9 +17,10 @@
        <%= link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant), class: "btn btn-warning" %>
   </div>
   </section>
- 	<%end%>
+  <hr class="separator">
+  <%end%>
  <%else%>
- 	No restaurants yet
+  No restaurants yet
  <%end%>
 
 <%= link_to 'Add a restaurant', new_restaurant_path %>
